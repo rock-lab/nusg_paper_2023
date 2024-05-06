@@ -1,0 +1,11 @@
+# ignore git stuff
+*.gitattributes
+
+# ignore data by default
+*.txt
+
+# ignore results
+*.Rds
+*.rds
+*.csv
+*.png

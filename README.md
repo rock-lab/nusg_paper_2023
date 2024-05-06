@@ -1,8 +1,8 @@
 # nusG paper
 Repository containing the code and methods for Eckartt & Delbeau et al. 2024
 
-
-Below is a short legend describing the main files, followed by example running the code:
+## Code 
+Below is a short legend describing the main files, followed by examples running the code:
 
 #### vulnerability_modeling_tools.R
 R code with functions useful for running the vulnerability analysis.
@@ -24,7 +24,7 @@ R code for creating plots of vulnerability results in parallel.
 #### process_reads.py
 Python code to process fastq files with reads
 
-#### subread.py
+#### subread\.py
 Tools useful to interact with the subread aligner. Must install via your OS package manager (e.g. sudo apt install subread)
 
 #### counting_tools.py
@@ -32,7 +32,18 @@ Tools useful for counting the aligned reads
 
 
 
-# Example
+
+## Data
+
+As data files are too large to host on github, they are provided in the Dropbox link below:
+
+https://www.dropbox.com/scl/fo/rbgm0vuhuq6j0t2x7zcvo/AJhbuM0qnkruHmw9ws5pg6Y?rlkey=h2giel9y3anlmoyvxmbz90tmb&st=l2w0qz5h&dl=0
+
+Included in the repository is two, small example files that can be used to test running the code.
+
+
+## Example
+Examples to show how to to run the code.
 
 ### Analysis
 To run the actual analysis with example parameters simply run:
@@ -49,7 +60,10 @@ where:
 
 For example:
 
-`Rscript gene_vulnerability_analysis.R --data example_nusG_data.txt --strain H37Rv --label RS  --output ./results/ --cores 20`
+`Rscript gene_vulnerability_analysis.R --data data/example_counts_H37Rv_biotinRR.txt --strain H37Rv --label biotinRR  --output ./results/ --cores 20`
+
+
+This will create a local folder "results", which will have two sub-folders containing the data passed to the model ("./results/model_data/"), and the samples obtained from the model (./results/model_data/).
 
 
 ### Plotting
@@ -71,8 +85,5 @@ where:
 
 
 `Rscript gene_vulnerability_plots.R --data example_nusG_data.txt --strain H37Rv --label RS  --output ./results/ --cores 20 --exp rifS --date 10_23_2023 --PLOTDIR ./results/plots/`
-
-
-
 
 
