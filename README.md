@@ -84,6 +84,6 @@ where:
 - WORKERS is the number of workers to be used when running in parallel.
 
 
-`Rscript gene_vulnerability_plots.R --data example_nusG_data.txt --strain H37Rv --label RS  --output ./results/ --cores 20 --exp rifS --date 10_23_2023 --PLOTDIR ./results/plots/`
+`Rscript gene_vulnerability_plots.R --data data/example_counts_H37Rv_biotinRR.txt --strain H37Rv --label biotinRR  --dir ./results/ --cores 20 --exp biotinRR --date 08_10_2023 --plot_dir ./results/plots/`
 
 
